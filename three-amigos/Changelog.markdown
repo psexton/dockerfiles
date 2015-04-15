@@ -1,0 +1,16 @@
+Changelog for psexton/three-amigos Dockerfile
+=============================================
+
+0.1.1 (2014-09-11)
+------------------
+
+* Rebuilding on top of psexton/couchdb:0.1.5
+
+0.1.0 (2014-07-25)
+------------------
+
+* Initial release
+* From psexton/couchdb, CouchDB 1.6.0 with SpiderMonkey 1.8.5 built from source
+* Redis stable built from source (2.8.13 at this moment)
+* Elasticsearch 1.2 installed from their debian package
+* `couchdb`, `elasticsearch`, and `redis-server` are on the path, but none of them run on startup
