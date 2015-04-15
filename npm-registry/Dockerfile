@@ -2,7 +2,7 @@
 # Follows instructions at <https://github.com/npm/npm-registry-couchapp>
 # No auth (be careful!)
 
-FROM psexton/couchdb:1.0.0-rc2
+FROM psexton/couchdb:1.0.0
 MAINTAINER Paul Sexton <paul@psexton.net>
 
 # Install git and HTTPS support for apt
