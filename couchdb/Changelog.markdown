@@ -2,10 +2,12 @@ Changelog for psexton/couchdb Dockerfile
 ========================================
 
 1.0.0 (2015-04-15)
+------------------
 
 * Upgrading to Ubuntu 14.04.2 as base image.
 
 1.0.0-rc2 (2014-12-22)
+----------------------
 
 * Upgrading to Ubuntu 14.04.1 as base image.
 * Tested/patched for shellshock vulnerabilities
@@ -13,7 +15,7 @@ Changelog for psexton/couchdb Dockerfile
 * Adding `couchdb` as default CMD.
 
 1.0.0-rc1 (2014-12-21)
-------------------
+----------------------
 
 * Upgrading Couch from 1.6.0 to 1.6.1
 
