@@ -17,8 +17,8 @@ ADD configure_couch.sh /root/configure_couch.sh
 ADD npm-registry-couchapp.ini /root/npm-registry-couchapp.ini
 RUN ./configure_couch.sh
 
-# Clone npm-registry-couchapp from github
-RUN git clone https://github.com/npm/npm-registry-couchapp
+# Clone npm-registry-couchapp from github (psexton fork)
+RUN git clone https://github.com/psexton/npm-registry-couchapp
 
 # Install the node package
 WORKDIR /root/npm-registry-couchapp
