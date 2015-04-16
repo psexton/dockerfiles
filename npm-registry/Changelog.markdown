@@ -1,6 +1,11 @@
 Changelog for psexton/npm-registry Dockerfile
 =============================================
 
+0.2.2 (2015-04-16)
+------------------
+
+* Reverting to older fork of npm-registry-couchapp code
+
 0.2.1 (2015-04-15)
 ------------------
 
