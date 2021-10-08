@@ -1,6 +1,11 @@
 Changelog for psexton/npm-registry-go Dockerfile
 ================================================
 
+0.2.3 (2021-10-07)
+-----------------
+
+* Upgraded base image (psexton/npm-registry) from 0.2.2 to 0.2.3
+
 0.2.2 (2015-04-16)
 ------------------
 
