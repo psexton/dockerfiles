@@ -1,6 +1,11 @@
 Changelog for psexton/couchdb Dockerfile
 ========================================
 
+1.0.1 (2021-10-07)
+------------------
+
+* Upgrading to Ubuntu 16.04 as base image.
+
 1.0.0 (2015-04-15)
 ------------------
 

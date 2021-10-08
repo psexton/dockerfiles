@@ -1,9 +1,10 @@
-# Builds a CouchDB app from source, using ubuntu 14.04.2 LTS as the base
+# Builds a CouchDB app from source, using ubuntu 16.04 as the base
 # Use version-pinned Mozilla Spidermonkey 1.8.5
+# Use version-pinned Erlang 16.b.2
 # Listens on all interfaces, not just localhost
 # Admin party mode - no auth (be careful!)
 
-FROM ubuntu:14.04.2
+FROM ubuntu:16.04
 MAINTAINER Paul Sexton <paul@psexton.net>
 
 # Set home directory
@@ -12,10 +13,13 @@ WORKDIR /root
 
 # Install dependencies
 # Using version pinned libmozjs185-dev instead of libmozjs-dev
-RUN apt-get update && apt-get install -y curl build-essential autoconf automake libtool erlang libicu-dev libmozjs185-dev libcurl4-openssl-dev
+# Using specific version of erlang because couch is very picky
+RUN apt-get update && apt-get install -y curl build-essential autoconf automake libtool libicu-dev libmozjs185-dev libcurl4-openssl-dev
+RUN curl -O https://packages.erlang-solutions.com/erlang/debian/pool/esl-erlang_16.b.2.basho10-1~ubuntu~xenial_amd64.deb
+RUN apt-get install -y ./esl-erlang_16.b.2.basho10-1~ubuntu~xenial_amd64.deb
 
 # Download and build CouchDB
-RUN curl http://www.eng.lsu.edu/mirrors/apache/couchdb/source/1.6.1/apache-couchdb-1.6.1.tar.gz | tar -xz
+RUN curl https://archive.apache.org/dist/couchdb/source/1.6.1/apache-couchdb-1.6.1.tar.gz | tar -xz
 RUN (cd apache-couchdb-1.6.1 && ./configure)
 RUN (cd apache-couchdb-1.6.1 && make)
 RUN (cd apache-couchdb-1.6.1 && make test) 
