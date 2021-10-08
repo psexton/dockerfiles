@@ -1,6 +1,12 @@
 Changelog for psexton/npm-registry Dockerfile
 =============================================
 
+0.2.3 (2021-10-07)
+-----------------
+
+* Built off of psexton/couchdb:1.0.1
+* Upgrading to node v8
+
 0.2.2 (2015-04-16)
 ------------------
 
