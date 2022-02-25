@@ -1,6 +1,6 @@
 # Starting with an NPM registry, install go 1.4
 
-FROM psexton/npm-registry:0.2.3
+FROM psexton/npm-registry:0.2.4
 MAINTAINER Paul Sexton <paul@psexton.net>
 
 # Install go
